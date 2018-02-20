@@ -1,0 +1,63 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+    <title>Dashboard BeeAdmin</title>
+
+    <!-- vendor css -->
+    <link href="{% static 'lib/font-awesome/css/font-awesome.css'%}" rel="stylesheet">
+    <link href="{% static 'lib/Ionicons/css/ionicons.css'%}" rel="stylesheet">
+    <link href="{% static 'lib/perfect-scrollbar/css/perfect-scrollbar.css'%}" rel="stylesheet">
+
+    <!-- Amanda CSS -->
+    <link rel="stylesheet" href="{% static 'css/web.css'%}">
+  </head>
+
+  <body>
+  <form method="POST">
+			{% csrf_token %}
+
+    <div class="am-signin-wrapper">
+      <div class="am-signin-box">
+        <div class="row no-gutters">
+          <div class="col-lg-5">
+            <div>
+              <h2>BeeAdmin HRIS</h2>
+              <p>Tag-Line Perusahaan</p>
+              <p>Gambaran perusahaan secara umum</p>
+
+              <hr>
+              <p>Don't have an account? <br> <a href="SignUp.html">Sign up Now</a></p>
+            </div>
+          </div>
+          <div class="col-lg-7">
+            <h5 class="tx-gray-800 mg-b-25">Signin to Your Account</h5>
+
+            <div class="form-group">
+              <label class="form-control-label">Username:</label>
+              <input type="username" name="username" class="form-control" placeholder="Enter your username address">
+            </div><!-- form-group -->
+
+            <div class="form-group">
+              <label class="form-control-label">Password:</label>
+              <input type="password" name="password" class="form-control" placeholder="Enter your password">
+            </div><!-- form-group -->
+
+            <div class="form-group mg-b-20"><a href="password_reset.html">Reset password</a></div>
+            <button type="submit" class="btn btn-block">Sign In</button></a>
+          </div><!-- col-7 -->
+        </div><!-- row -->
+        <p class="tx-center tx-white-5 tx-12 mg-t-15">Copyright &copy; 2017. All Rights Reserved. HRIS</p>
+      </div><!-- signin-box -->
+    </div><!-- am-signin-wrapper -->
+	</form>
+
+    <script src="{% static 'lib/jquery/jquery.js'%}"></script>
+    <script src="{% static 'lib/popper.js/popper.js'%}"></script>
+    <script src="{% static 'lib/bootstrap/bootstrap.js'%}"></script>
+    <script src="{% static 'lib/perfect-scrollbar/js/perfect-scrollbar.jquery.js'%}"></script>
+
+    <script src="{% static 'js/hris.js'%}"></script>
+  </body>
+</html>

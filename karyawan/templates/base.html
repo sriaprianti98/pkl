@@ -1,0 +1,375 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>B-Dev | Admin</title>
+
+    <!-- vendor css -->
+    <link href="{% static 'lib/font-awesome/css/font-awesome.css'%}" rel="stylesheet">
+    <link href="{% static 'lib/Ionicons/css/ionicons.css'%}" rel="stylesheet">
+    <link href="{% static 'lib/perfect-scrollbar/css/perfect-scrollbar.css'%}" rel="stylesheet">
+    <link href="{% static 'lib/jquery-toggles/toggles-full.css'%}" rel="stylesheet">
+    <link href="{% static 'lib/rickshaw/rickshaw.min.css'%}" rel="stylesheet">
+
+    <link rel="stylesheet" href="{% static 'css/web.css'%}">
+  </head>
+
+  <body>
+    <div class="am-header">
+      <div class="am-header-left">
+        <a id="naviconLeft" href="" class="am-navicon d-none d-lg-flex"><i class="icon ion-navicon-round"></i></a>
+        <a id="naviconLeftMobile" href="" class="am-navicon d-lg-none"><i class="icon ion-navicon-round"></i></a>
+        <a href="index.html" class="am-logo"><img src="img/bdev-hexa.png" style="height: 4vh; margin-bottom: 10px"> Nama Perusahaan</a>
+      </div><!-- am-header-left -->
+
+      <div class="am-header-right">
+        <div class="dropdown dropdown-notification">
+          <a href="" class="nav-link pd-x-7 pos-relative" data-toggle="dropdown">
+            <i class="icon ion-ios-bell-outline tx-24"></i>
+            <!-- start: if statement -->
+            <span class="square-8 bg-danger pos-absolute t-15 r-0 rounded-circle"></span>
+            <!-- end: if statement -->
+          </a>
+          <div class="dropdown-menu wd-300 pd-0-force">
+            <div class="dropdown-menu-header">
+              <label>Notifications</label>
+              <a href="">Mark All as Read</a>
+            </div><!-- d-flex -->
+
+            <div class="media-list">
+              <!-- loop starts here -->
+              <a href="" class="media-list-link read">
+                <div class="media pd-x-20 pd-y-15">
+                  <img src="img/mwb.jpg" class="wd-40 rounded-circle" alt="">
+                  <div class="media-body">
+                    <p class="tx-13 mg-b-0"><strong class="tx-medium">{{user.username}}</strong> Update front-page pada web BDev (Logo,Font dan Foto)</p>
+                    <span class="tx-12">Januari 08, 2018 11:00am</span>
+                  </div>
+                </div><!-- media -->
+              </a>
+              <!-- loop ends here -->
+              <a href="" class="media-list-link read">
+                <div class="media pd-x-20 pd-y-15">
+                  <img src="img/mwb.jpg" class="wd-40 rounded-circle" alt="">
+                  <div class="media-body">
+                    <p class="tx-13 mg-b-0"><strong class="tx-medium">Wildan Balfas</strong> Update front-page pada web BDev (Logo,Font dan Foto)</p>
+                    <span class="tx-12">Januari 08, 2018 11:00am</span>
+                  </div>
+                </div><!-- media -->
+              </a>
+              <div class="media-list-footer">
+                <a href="" class="tx-12"><i class="fa fa-angle-down mg-r-5"></i> Show All Notifications</a>
+              </div>
+            </div><!-- media-list -->
+          </div><!-- dropdown-menu -->
+        </div><!-- dropdown -->
+        <div class="dropdown dropdown-profile">
+          <a href="" class="nav-link nav-link-profile" data-toggle="dropdown">
+            <img src="img/mwb.jpg" class="wd-32 rounded-circle" alt="">
+            <span class="logged-name"><span class="hidden-xs-down">Wildan Balfas</span> <i class="fa fa-angle-down mg-l-3"></i></span>
+          </a>
+          <div class="dropdown-menu wd-200">
+            <ul class="list-unstyled user-profile-nav">
+              <li><a href=""><i class="icon ion-ios-person-outline"></i> Edit Profile</a></li>
+              <li><a href=""><i class="icon ion-ios-gear-outline"></i> Settings</a></li>
+              <li><a href='login'><i class="icon ion-power"></i> Sign Out</a></li>
+            </ul>
+          </div><!-- dropdown-menu -->
+        </div><!-- dropdown -->
+      </div><!-- am-header-right -->
+    </div><!-- am-header -->
+
+    <div class="am-sideleft">
+      <ul class="nav am-sideleft-tab">
+        <li class="nav-item">
+          <a href="#mainMenu" class="nav-link active"><i class="icon ion-ios-home-outline tx-24"></i></a>
+        </li>
+        <li class="nav-item">
+          <a href="#emailMenu" class="nav-link"><i class="icon ion-ios-eye-outline tx-24"></i></a>
+        </li>
+        <li class="nav-item">
+          <a href="#chatMenu" class="nav-link"><i class="icon ion-ios-timer-outline tx-24"></i></a>
+        </li>
+        <li class="nav-item">
+          <a href="#settingMenu" class="nav-link"><i class="icon ion-ios-settings-strong tx-24"></i></a>
+        </li>
+      </ul>
+
+      <div class="tab-content">
+        <div id="mainMenu" class="tab-pane active">
+          <ul class="nav am-sideleft-menu">
+            <li class="nav-item">
+              <a href='beranda' class="nav-link active">
+                <i class="icon ion-ios-home-outline"></i>
+                <span>Dashboard</span>
+              </a>
+            </li><!-- nav-item -->
+            <li class="nav-item">
+              <a href="" class="nav-link with-sub">
+                <i class="icon ion-earth"></i>
+                <span>Perusahaan</span>
+              </a>
+              <ul class="nav-sub">
+                <li class="nav-item"><a href="pengumuman.html" class="nav-link">Pengumuman</a></li>
+                <li class="nav-item">
+                  <a href="" class="nav-link with-sub">
+                    <i class="icon ion-folder"></i>
+                    <span>Profil Company</span>
+                  </a>
+                  <ul class="nav-sub">
+                    <li class="nav-item"><a href="#" class="nav-link">Profil</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a href="" class="nav-link with-sub">
+                <i class="icon ion-man"></i>
+                <span>Karyawan</span>
+              </a>
+              <ul class="nav-sub">
+                <li class="nav-item"><a href="peringatan" class="nav-link">Peringatan</a></li>
+                <li class="nav-item"><a href='tugas' class="nav-link">Tugas</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Dokumentasi karyawan</a></li>
+                <li class="nav-item">
+                  <a href="" class="nav-link with-sub">
+                    <i class="icon ion-folder"></i>
+                    <span>Perubahan Data</span>
+                  </a>
+                  <ul class="nav-sub">
+                    <li class="nav-item"><a href="#" class="nav-link">Persetujuan</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Riwayat</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a href="" class="nav-link with-sub">
+                <i class="icon ion-ios-time-outline"></i>
+                <span>Jadwal & Absensi</span>
+              </a>
+              <ul class="nav-sub">
+                <li class="nav-item"><a href="#" class="nav-link">Lihat Jadwal</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Log absensi</a></li>
+                <li class="nav-item">
+                  <a href="" class="nav-link with-sub">
+                    <i class="icon ion-folder"></i>
+                    <span>Pengajuan Absensi</span>
+                  </a>
+                  <ul class="nav-sub">
+                    <li class="nav-item"><a href="#" class="nav-link">Pengajuan</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Riwayat</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a href="" class="nav-link with-sub">
+                <i class="icon ion-ios-timer-outline"></i>
+                <span>Lembur</span>
+              </a>
+              <ul class="nav-sub">
+                <li class="nav-item"><a href="#" class="nav-link">Pengajuan</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a href="" class="nav-link with-sub">
+                <i class="icon ion-android-hand"></i>
+                <span>Izin</span>
+              </a>
+              <ul class="nav-sub">
+                <li class="nav-item"><a href="#" class="nav-link">Pengajuan</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a href="" class="nav-link with-sub">
+                <i class="icon ion-android-bicycle"></i>
+                <span>Perjalanan bisnis</span>
+              </a>
+              <ul class="nav-sub">
+                <li class="nav-item"><a href="#" class="nav-link">Pengajuan</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Persetujuan</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Riwayat</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a href="" class="nav-link with-sub">
+                <i class="icon ion-code-working"></i>
+                <span>Cuti</span>
+              </a>
+              <ul class="nav-sub">
+                <li class="nav-item"><a href="#" class="nav-link">Pengajuan</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Saldo</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Riwayat</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a href="" class="nav-link with-sub">
+                <i class="icon ion-ios-list-outline"></i>
+                <span>Penggantian Biaya</span>
+              </a>
+              <ul class="nav-sub">
+                <li class="nav-item"><a href="#" class="nav-link">Pengajuan</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Persetujuan</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Saldo</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Riwayat</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a href="" class="nav-link with-sub">
+                <i class="icon ion-ios-list-outline"></i>
+                <span>Pinajaman</span>
+              </a>
+              <ul class="nav-sub">
+                <li class="nav-item"><a href="#" class="nav-link">Pengajuan</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Persetujuan</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Saldo</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Riwayat</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a href="" class="nav-link with-sub">
+                <i class="icon ion-ios-list-outline"></i>
+                <span>Gaji</span>
+              </a>
+              <ul class="nav-sub">
+                <li class="nav-item"><a href="#" class="nav-link">Slip Gaji</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a href="" class="nav-link with-sub">
+                <i class="icon ion-ios-list-outline"></i>
+                <span>Laporan</span>
+              </a>
+              <ul class="nav-sub">
+                <li class="nav-item"><a href="#" class="nav-link">Kehadiran</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Kehadiran Bawahan</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Karir Transisi</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div><!-- #mainMenu -->
+        <div id="emailMenu" class="tab-pane">
+          <ul class="nav am-sideleft-menu">
+            <li class="nav-item">
+              <a href="page-inbox.html" class="nav-link">
+                <i class="icon ion-ios-filing-outline"></i>
+                <span>Project 1</span>
+              </a>
+            </li><!-- nav-item -->
+            <li class="nav-item">
+              <a href="page-inbox.html" class="nav-link">
+                <i class="icon ion-ios-filing-outline"></i>
+                <span>Project 2</span>
+              </a>
+            </li><!-- nav-item -->
+            <li class="nav-item">
+              <a href="page-inbox.html" class="nav-link">
+                <i class="icon ion-ios-filing-outline"></i>
+                <span>Project 3</span>
+              </a>
+            </li>
+          </ul>
+            
+        </div><!-- #emailMenu -->
+        <div id="chatMenu" class="tab-pane">
+          <div class="chat-search-bar">
+            <input type="search" class="form-control wd-150" placeholder="Search chat...">
+            <button class="btn btn-secondary"><i class="fa fa-search"></i></button>
+          </div><!-- chat-search-bar -->
+
+          <label class="pd-x-15 tx-uppercase tx-11 mg-t-20 tx-orange mg-b-10 tx-medium">Team Progres History</label>
+          <div class="list-group list-group-chat">
+            <a href="#" class="list-group-item">
+              <div class="d-flex align-items-center">
+                <img src="img/mwb.jpg" class="wd-32 rounded-circle" alt="">
+                <div class="mg-l-10">
+                  <h6>Wildan Balfas</h6>
+                  <span>Senin, 11:00am</span>
+                </div>
+              </div><!-- d-flex -->
+              <p>Update front-page pada web BDev (Logo,Font dan Foto)</p>
+            </a><!-- list-group-item -->
+            <a href="#" class="list-group-item">
+              <div class="d-flex align-items-center">
+                <img src="img/img7.jpg" class="wd-32 rounded-circle" alt="">
+                <div class="mg-l-10">
+                  <h6>Zubair</h6>
+                  <span>Selasa, 08:00am</span>
+                </div>
+              </div><!-- d-flex -->
+              <p>Convert source BDev to DJANGO dan upload website</p>
+            </a><!-- list-group-item -->
+          </div><!-- list-group -->
+          <span class="d-block pd-15 tx-12">Loading messages...</span>
+
+        </div><!-- #chatMenu -->
+        <div id="settingMenu" class="tab-pane">
+          <div class="pd-x-15">
+            <label class="tx-uppercase tx-11 mg-t-10 tx-orange mg-b-15 tx-medium">Quick Settings</label>
+            <div class="bd pd-15">
+              <h6 class="tx-13 tx-normal tx-gray-800">Daily Newsletter</h6>
+              <p class="tx-12">Get notified when someone else is trying to access your account.</p>
+              <div class="toggle toggle-light warning"></div>
+            </div><!-- bd -->
+
+            <div class="bd pd-15 mg-t-15">
+              <h6 class="tx-13 tx-normal tx-gray-800">Call Phones</h6>
+              <p class="tx-12">Make calls to friends and family right from your account.</p>
+              <div class="toggle toggle-light warning"></div>
+            </div><!-- bd -->
+
+            <div class="bd pd-15 mg-t-15">
+              <h6 class="tx-13 tx-normal tx-gray-800">Login Notifications</h6>
+              <p class="tx-12">Get notified when someone else is trying to access your account.</p>
+              <div class="toggle toggle-light warning"></div>
+            </div><!-- bd -->
+
+            <div class="bd pd-15 mg-t-15">
+              <h6 class="tx-13 tx-normal tx-gray-800">Phone Approvals</h6>
+              <p class="tx-12">Use your phone when login as an extra layer of security.</p>
+              <div class="toggle toggle-light warning"></div>
+            </div><!-- bd -->
+          </div>
+        </div><!-- #settingMenu -->
+      </div><!-- tab-content -->
+    </div><!-- am-sideleft -->
+    <div class="am-mainpanel">
+        <div class="am-pagetitle">
+          <h5 class="am-title">Dashboard</h5>
+          <form id="searchBar" class="search-bar" action="index.html">
+            <div class="form-control-wrapper">
+              <input type="search" class="form-control bd-0" placeholder="Search...">
+            </div><!-- form-control-wrapper -->
+            <button id="searchBtn" class="btn btn-orange"><i class="fa fa-search"></i></button>
+          </form><!-- search-bar -->
+        </div><!-- am-pagetitle -->
+
+
+    {% block body %}
+
+    {% endblock %}
+
+    <script src="{% static 'lib/jquery/jquery.js'%}"></script>
+    <script src="{% static 'lib/popper.js/popper.js'%}"></script>
+    <script src="{% static 'lib/bootstrap/bootstrap.js'%}"></script>
+    <script src="{% static 'lib/perfect-scrollbar/js/perfect-scrollbar.jquery.js'%}"></script>
+    <script src="{% static 'lib/jquery-toggles/toggles.min.js'%}"></script>
+    <script src="{% static 'lib/d3/d3.js'%}"></script>
+    <script src="{% static 'lib/rickshaw/rickshaw.min.js'%}"></script>
+    <script src="{% static 'lib/gmaps/gmaps.js'%}"></script>
+    <script src="{% static 'lib/Flot/jquery.flot.js'%}"></script>
+    <script src="{% static 'lib/Flot/jquery.flot.pie.js'%}"></script>
+    <script src="{% static 'lib/Flot/jquery.flot.resize.js'%}"></script>
+    <script src="{% static 'lib/flot-spline/jquery.flot.spline.js'%}"></script>
+
+    <script src="{% static 'js/hris.js'%}"></script>
+    <script src="{% static 'js/ResizeSensor.js'%}"></script>
+    <script src="{% static 'js/dashboard.js'%}"></script>
+    
+  </body>
+</html>

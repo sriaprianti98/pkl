@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+
+<html>
+  <head>
+    <!-- Required meta tags -->
+    <title>B-Dev | Admin</title>
+  </head>
+  {% block body %}
+      
+      <div class="am-pagetitle">
+        <h5 class="am-title">Tugas</h5>
+        <form id="searchBar" class="search-bar" action="index.html">
+          <div class="form-control-wrapper">
+            <input type="search" class="form-control bd-0" placeholder="Search...">
+          </div><!-- form-control-wrapper -->
+          <button id="searchBtn" class="btn btn-orange"><i class="fa fa-search"></i></button>
+        </form><!-- search-bar -->
+      </div><!-- am-pagetitle -->
+
+      <div class="card pd-20 pd-sm-40">
+        <h6 class="card-body-title">Table</h6>
+        <p class="mg-b-20 mg-sm-b-30">Data Peringatan Karyawan</p>
+          <table id="datatable1" class="table display responsive nowrap">
+            <thead>
+              <tr>
+                <th class="wd-15p">Nama</th>
+                <th class="wd-15p">Date</th>
+                <th class="wd-15p">Peringatan</th>
+                <th class="wd-10p">Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Nicholas</td>
+                <td>2011/04/25</td>
+                <td>Absen kantor</td>
+                <td>Warning</td>
+              </tr>
+              <tr>
+                <td>Martin</td>
+                <td>2011/08/15</td>
+                <td>Absen kantor</td>
+                <td>Good</td>
+              </tr>
+              <tr>
+                <td>Marquez</td>
+                <td>2011/09/21</td>
+                <td>Absen kantor</td>
+                <td>Danger</td>
+              </tr>
+              <tr>
+                <td>Gerrad</td>
+                <td>2011/02/22</td>
+                <td>Tepat Waktu</td>
+                <td>Good</td>
+              </tr>
+              <tr>
+                <td>Mike</td>
+                <td>2011/03/14</td>
+                <td>Tepat Waktu</td>
+                <td>Warning</td>
+              </tr>
+            </tbody>
+          </table>
+        </div><!-- table-wrapper -->
+      </div>
+
+      <div class="am-footer">
+      </div><!-- am-footer -->
+    {% endblock %}
+  </body>
+</html>
